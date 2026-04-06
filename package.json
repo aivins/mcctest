@@ -1,0 +1,16 @@
+{
+  "name": "midland-cycling-club",
+  "version": "1.0.0",
+  "description": "Midland Cycle Club website",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

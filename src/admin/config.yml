@@ -1,0 +1,70 @@
+backend:
+  name: github
+  repo: aivins/mcctest
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "News Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "src/pages/about.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Rides"
+        name: "rides"
+        file: "src/pages/rides.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/rides/" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Join"
+        name: "join"
+        file: "src/pages/join.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/join/" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Contact"
+        name: "contact"
+        file: "src/pages/contact.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/contact/" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Settings"
+        name: "site"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site Name", name: "name", widget: "string" }
+          - { label: "Site Description", name: "description", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string", required: false }

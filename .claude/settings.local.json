@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:midlandcycleclub.com.au)",
+      "WebFetch(domain:www.midlandcycleclub.com.au)",
+      "Bash(curl -sL -o /Users/andrew/dev/mccnew/src/images/logo.png \"https://midlandcycleclub.com.au/favicon.ico\")",
+      "Bash(identify /Users/andrew/dev/mccnew/src/images/logo.png)",
+      "Bash(sips -g all /Users/andrew/dev/mccnew/src/images/logo.png)",
+      "WebFetch(domain:rollouts.ivins.id.au)",
+      "Bash(curl -sL -o /Users/andrew/dev/mccnew/src/images/logo.png \"https://static.wixstatic.com/media/af6112_9aaf920e57b0487aa8b28efeb621498e~mv2.png/v1/fill/w_225,h_140,al_c,lg_1,q_85,enc_avif,quality_auto/af6112_9aaf920e57b0487aa8b28efeb621498e~mv2.png\")"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<section class="hero">
+  <div class="container">
+    <img src="/images/logo.png" alt="" class="hero-logo" width="200" height="124">
+    <h1>Midland Cycling Club</h1>
+    <p>Friendly group rides around Perth's eastern suburbs and beyond. Whether you're new to cycling or a seasoned rider, there's a group for you.</p>
+    <div class="hero-actions">
+      <a href="/join/" class="btn btn--primary">Join the Club</a>
+      <a href="/rides/" class="btn btn--outline">View Rides</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Ride With Us</h2>
+    <p>We run group rides every weekend and regular midweek sessions through the summer months.</p>
+    <div class="ride-groups">
+      <div class="ride-group">
+        <h3>Social Ride</h3>
+        <div class="meta">Saturdays &middot; 9:00 AM &middot; 30&ndash;50 km</div>
+        <p>Relaxed pace, no-drop ride. Perfect for beginners or anyone who fancies an easy spin.</p>
+      </div>
+      <div class="ride-group">
+        <h3>Club Ride</h3>
+        <div class="meta">Sundays &middot; 8:30 AM &middot; 60&ndash;100 km</div>
+        <p>Steady tempo through the lanes. A good mix of flat and rolling terrain.</p>
+      </div>
+      <div class="ride-group">
+        <h3>Fast Group</h3>
+        <div class="meta">Sundays &middot; 8:00 AM &middot; 80&ndash;120 km</div>
+        <p>Brisk pace for experienced riders. Chain-gang skills and longer distances.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2>Latest News</h2>
+    <p>What's been happening at the club.</p>
+    <div class="card-grid">
+      {%- for post in collections.posts.slice(0, 3) %}
+      <div class="card">
+        <time datetime="{{ post.date | dateFormat }}">{{ post.date | dateFormat }}</time>
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        <p>{{ post.data.description }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

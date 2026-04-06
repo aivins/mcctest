@@ -1,0 +1,19 @@
+---
+layout: layouts/page.njk
+title: News
+description: Latest news from Midland Cycling Club.
+permalink: /news/
+---
+
+<div class="card-grid">
+  {%- for post in collections.posts %}
+  <div class="card">
+    <time datetime="{{ post.date | dateFormat }}">{{ post.date | dateFormat }}</time>
+    <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+    <p>{{ post.data.description }}</p>
+  </div>
+  {%- endfor %}
+  {%- if collections.posts.length == 0 %}
+  <p>No news posts yet. Check back soon!</p>
+  {%- endif %}
+</div>
